@@ -9,6 +9,9 @@ MOTOR_DIRECTION motorDirection = STOP;
 String inputString = "";
 
 void setup() {
+  Serial.begin(9600);
+  Serial.println("Setup complete");
+
   MTR_LEFT.init();
   MTR_RIGHT.init();
 
@@ -17,9 +20,6 @@ void setup() {
   SNS_RIGHT.init();
 
   automaticInit();
-
-  Serial.begin(9600);
-  Serial.println("Setup complete");
 
   if (TEST_MOTOR)
     testMotor();
@@ -40,7 +40,7 @@ void loop() {
   if (DEBUGGING)
     debug();
 
-  delay(10);
+  delayMicroseconds(10);
 }
 
 void checkSerial()

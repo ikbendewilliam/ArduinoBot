@@ -15,6 +15,7 @@ class Motor
     {
       pinMode(_pinForward, OUTPUT);
       pinMode(_pinBack, OUTPUT);
+      Serial.println();
     }
 
     void forward() const

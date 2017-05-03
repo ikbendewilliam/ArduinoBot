@@ -10,7 +10,6 @@ void debug()
   Serial.println(String(" middle: ") + (SNS_MIDDLE.isHigh() ? "on" : "off"));
   Serial.println(String(" right: ") + (SNS_RIGHT.isHigh() ? "on" : "off"));
   Serial.println(String(" distance: ") + distance + "cm");
-  delay(990); // Make the delay to 1 sec
 }
 
 void testMotor()
@@ -34,29 +33,29 @@ void testMotor()
   MTR_RIGHT.stop();
   delay(900);
   Serial.println(String("Test move SOFT_LEFT (0.1sec)"));
-  MTR_LEFT.forward();
-  MTR_RIGHT.stop();
+  MTR_LEFT.stop();
+  MTR_RIGHT.forward();
   delay(100);
   MTR_LEFT.stop();
   MTR_RIGHT.stop();
   delay(900);
   Serial.println(String("Test move HARD_LEFT (0.1sec)"));
-  MTR_LEFT.forward();
-  MTR_RIGHT.back();
+  MTR_LEFT.back();
+  MTR_RIGHT.forward();
   delay(100);
   MTR_LEFT.stop();
   MTR_RIGHT.stop();
   delay(900);
   Serial.println(String("Test move SOFT_RIGHT (0.1sec)"));
-  MTR_LEFT.stop();
-  MTR_RIGHT.forward();
+  MTR_LEFT.forward();
+  MTR_RIGHT.stop();
   delay(100);
   MTR_LEFT.stop();
   MTR_RIGHT.stop();
   delay(900);
   Serial.println(String("Test move HARD_RIGHT (0.1sec)"));
-  MTR_LEFT.back();
-  MTR_RIGHT.forward();
+  MTR_LEFT.forward();
+  MTR_RIGHT.back();
   delay(100);
   MTR_LEFT.stop();
   MTR_RIGHT.stop();

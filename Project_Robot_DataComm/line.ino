@@ -11,16 +11,16 @@ void moveLine()
   else if (snsLeft)
   {
     if (snsMiddle)
-      motorDirection = SOFT_RIGHT;
+      motorDirection = SOFT_LEFT;
     else
-      motorDirection = HARD_RIGHT;
+      motorDirection = HARD_LEFT;
   }
   else if (snsRight)
   {
     if (snsMiddle)
-      motorDirection = SOFT_LEFT;
+      motorDirection = SOFT_RIGHT;
     else
-      motorDirection = HARD_LEFT;
+      motorDirection = HARD_RIGHT;
   }
   else // None
     motorDirection = STOP;
