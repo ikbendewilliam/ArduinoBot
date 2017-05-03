@@ -23,6 +23,6 @@ void moveLine()
       motorDirection = HARD_RIGHT;
   }
   else // None
-    motorDirection = STOP;
+    motorDirection = START;
 }
 
