@@ -4,7 +4,7 @@ void moveLine()
   bool snsMiddle = SNS_MIDDLE.isHigh();
   bool snsRight = SNS_RIGHT.isHigh();
 
-  if (snsMiddle && (snsLeft == snsRight)) // if only middle or all 3
+  if (snsLeft == snsRight) // if outer are either both on or off
   {
     motorDirection = START;
   }
@@ -15,14 +15,12 @@ void moveLine()
     else
       motorDirection = HARD_LEFT;
   }
-  else if (snsRight)
+  else// if (snsRight)
   {
     if (snsMiddle)
       motorDirection = SOFT_RIGHT;
     else
       motorDirection = HARD_RIGHT;
   }
-  else // None
-    motorDirection = START;
 }
 

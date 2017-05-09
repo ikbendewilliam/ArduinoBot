@@ -36,11 +36,6 @@ void moveAutomatic()
       if (distance > DISTANCE_MED)
         currentManoeuvre = ROTATE_HARD_LEFT;
     }
-    else if (currentManoeuvre == ROTATE_HARD_LEFT)
-    {
-      if (distance > DISTANCE_MAX)
-        currentManoeuvre = NONE;
-    }
   }
   switch (currentManoeuvre)
   {
