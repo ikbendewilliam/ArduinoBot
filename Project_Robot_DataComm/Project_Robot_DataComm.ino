@@ -10,7 +10,7 @@ String inputString = "";
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Setup complete");
+  Serial.println("Setup completed bluetooth works now");
 
   MTR_LEFT.init();
   MTR_RIGHT.init();
